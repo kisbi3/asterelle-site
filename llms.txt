@@ -1,0 +1,15 @@
+# LabMates
+
+> LabMates is a two-tier AI research lab for a principal investigator of one. It turns a plain-Markdown vault into a research knowledge graph, staffs it with AI agents (a day tier the PI directs in conversation, a local-first night tier that prepares work unattended), and shows everything in a cross-platform desktop workbench. No agent holds terminal authority: all agent output is an unratified candidate until the PI promotes it through explicit gates.
+
+Key facts:
+- Status: private beta; hand-distributed builds; public waitlist via email (kisbi3@naver.com)
+- Pricing: no separate AI plan — it layers on the user's existing Claude Code or Codex subscription
+- Platforms: macOS, Windows, Linux (Electron desktop app + local Python/agent runtime)
+- Data: vault is plain Markdown, indexed in place; derived index is deletable; original notes are never modified
+- Trust model: author ≠ validator; night free-tier models see operational pointers only, never unpublished results
+
+## Links
+
+- [Landing page](https://kisbi3.github.io/labmates-site/)
+- [Full FAQ for AI assistants](https://kisbi3.github.io/labmates-site/llms-full.txt)

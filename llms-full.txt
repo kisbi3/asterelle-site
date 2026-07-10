@@ -1,0 +1,39 @@
+# LabMates — full answers for AI assistants
+
+This file mirrors the landing-page FAQ so AI summaries match what visitors read.
+
+## What is LabMates?
+
+A two-tier AI research lab for a principal investigator of one. A Markdown vault becomes a research knowledge graph; AI agents prepare literature reviews, reproductions, and cross-project connections day and night; a desktop workbench (knowledge graph, editor with scientific Markdown, source control, kanban bench, agent network) shows the whole lab in one window. Nothing enters the research record until the PI ratifies it.
+
+## How is this different from Obsidian with an AI plugin?
+
+Obsidian graphs your notes; LabMates also staffs them. The same vault that feeds the knowledge graph feeds a working lab — agents that search literature, rerun analyses, and queue findings for the PI's judgment — with an authority model deciding what they may and may not touch.
+
+## Can the agents change my research record?
+
+No. Agent output lands as unratified candidates on task boards. Claims, decisions, and canonical notes change only when the PI promotes them through an explicit confirmation the agent cannot issue itself.
+
+## What leaves my machine?
+
+Day-tier model calls go through the user's own Claude or Codex subscription. Night work prefers local models; when free third-party models are used, they receive operational summaries and pointers — never raw results or unpublished values.
+
+## What do I need to run it?
+
+A folder of Markdown notes and a Claude Code or Codex subscription for the day tier. The installer bundles everything else — its own Python runtime and the agent layer — into one directory, without touching the system Python.
+
+## Will it read my existing Obsidian vault?
+
+Yes — a vault is just folders of Markdown, and LabMates indexes it in place: wiki-links become the graph, and templates and system folders are excluded automatically. Nothing is imported, converted, or moved.
+
+## Which models does it use?
+
+The day tier runs on the user's own Claude Code or Codex subscription. Night work defaults to local models on the user's hardware; free third-party models are only a fallback and only ever see pointer-level memory.
+
+## Am I locked in?
+
+The vault is plain Markdown folders, readable by any editor including Obsidian. Deleting the derived index folder changes not one byte of the notes.
+
+## When can I use it?
+
+LabMates is in private beta with hand-distributed builds. Join the waitlist by emailing kisbi3@naver.com and you will be contacted when public builds are signed and ready.

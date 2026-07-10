@@ -18,6 +18,7 @@
 <meta property="og:url" content="https://kisbi3.github.io/labmates-site/">
 <meta property="og:image" content="https://kisbi3.github.io/labmates-site/assets/graph.png">
 <link rel="canonical" href="https://kisbi3.github.io/labmates-site/">
+<link rel="alternate" type="text/plain" href="https://kisbi3.github.io/labmates-site/llms.txt">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://kisbi3.github.io/labmates-site/assets/graph.png">
 <meta name="twitter:title" content="LabMates · An AI research lab for a PI of one">
@@ -916,6 +917,9 @@ footer.foot {
         <figure class="gallery-panel" data-title="Editor" data-line="Markdown stays canonical; the prose stays yours." aria-hidden="true">
           <img src="./assets/editor.png" alt="LabMates editor: a project memory note rendered in reading mode beside the vault file tree" loading="lazy" decoding="async">
         </figure>
+        <figure class="gallery-panel" data-title="Scientific Markdown" data-line="Equations numbered, references resolved — even inside tables." aria-hidden="true">
+          <img src="./assets/math.png" alt="LabMates reading mode: numbered display equations, resolved cross-references, and inline math rendered inside a Markdown table" loading="lazy" decoding="async">
+        </figure>
         <figure class="gallery-panel" data-title="Source control" data-line="Every result, versioned beside the note that claims it." aria-hidden="true">
           <img src="./assets/git.png" alt="LabMates source control: commit graph and staged changes beside a Python analysis file in the Monaco editor" loading="lazy" decoding="async">
         </figure>
@@ -933,6 +937,7 @@ footer.foot {
       <div class="gallery-tabs" aria-label="Choose a screenshot">
         <button type="button" class="is-active" aria-pressed="true">Knowledge graph</button>
         <button type="button" aria-pressed="false">Editor</button>
+        <button type="button" aria-pressed="false">Scientific Markdown</button>
         <button type="button" aria-pressed="false">Source control</button>
         <button type="button" aria-pressed="false">Bench</button>
         <button type="button" aria-pressed="false">Agent network</button>
@@ -940,10 +945,38 @@ footer.foot {
     </div>
   </section>
 
-  <!-- ============ 01 · Features ============ -->
+  <!-- ============ 01 · A day in the lab ============ -->
   <section>
     <div class="section-head">
-      <p class="section-num">01 · What the lab does</p>
+      <p class="section-num">01 · A day in the lab</p>
+      <h2 class="section-title">The lab works nights. You decide mornings.</h2>
+      <p class="section-lede">Preparation flows upstream all night and meets your judgment once a day, well-prepared and high-signal.</p>
+    </div>
+
+    <ol class="features">
+      <li>
+        <p class="name">Evening<small>Queue the night.</small></p>
+        <p class="what">You stage seeds before you leave: a literature question, a reproduction to attempt, a cross-project scan. Night tasks are blocked by default — nothing runs that you did not queue.</p>
+      </li>
+      <li>
+        <p class="name">Overnight<small>The lab grinds.</small></p>
+        <p class="what">Local workers drain the queue: literature radar, inbox staging and manifests, connection candidates between projects. Every product lands as an unratified candidate with a receipt — never as a silent edit.</p>
+      </li>
+      <li>
+        <p class="name">Morning<small>The briefing.</small></p>
+        <p class="what">Mates curates what survived the night: each candidate arrives with the reason it passed the filter, its evidence grade, and the one question that needs your answer.</p>
+      </li>
+      <li>
+        <p class="name">Your call<small>Ratify or reject.</small></p>
+        <p class="what">Accepted results promote through the gates into the project record. Rejected ones are logged with the reason — so the lab never proposes the same dead end twice.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 02 · Features ============ -->
+  <section>
+    <div class="section-head">
+      <p class="section-num">02 · What the lab does</p>
       <h2 class="section-title">A lab, not a chatbot</h2>
     </div>
 
@@ -975,10 +1008,10 @@ footer.foot {
     </ol>
   </section>
 
-  <!-- ============ 02 · Principles ============ -->
+  <!-- ============ 03 · Principles ============ -->
   <section>
     <div class="section-head">
-      <p class="section-num">02 · How it earns trust</p>
+      <p class="section-num">03 · How it earns trust</p>
       <h2 class="section-title">Agents prepare. You ratify.</h2>
     </div>
 
@@ -1010,10 +1043,10 @@ footer.foot {
     </ol>
   </section>
 
-  <!-- ============ 03 · Availability ============ -->
+  <!-- ============ 04 · Availability ============ -->
   <section>
     <div class="section-head">
-      <p class="section-num">03 · Availability</p>
+      <p class="section-num">04 · Availability</p>
       <h2 class="section-title">Private beta</h2>
     </div>
 
@@ -1026,10 +1059,10 @@ footer.foot {
     </div>
   </section>
 
-  <!-- ============ 04 · FAQ ============ -->
+  <!-- ============ 05 · FAQ ============ -->
   <section>
     <div class="section-head">
-      <p class="section-num">04 · FAQ</p>
+      <p class="section-num">05 · FAQ</p>
       <h2 class="section-title">The questions researchers ask</h2>
     </div>
 
@@ -1049,6 +1082,14 @@ footer.foot {
       <div class="faq-pair">
         <dt>What do I need to run it?</dt>
         <dd>A folder of Markdown notes and a Claude Code or Codex subscription for the day tier. The installer bundles everything else — its own Python runtime and the agent layer — into one directory, without touching your system Python.</dd>
+      </div>
+      <div class="faq-pair">
+        <dt>Will it read my existing Obsidian vault?</dt>
+        <dd>Yes — a vault is just folders of Markdown, and LabMates indexes it in place: your wiki-links become the graph, and templates and system folders are excluded automatically. Nothing is imported, converted, or moved.</dd>
+      </div>
+      <div class="faq-pair">
+        <dt>Which models does it use?</dt>
+        <dd>The day tier runs on your own Claude Code or Codex subscription. Night work defaults to local models on your hardware; free third-party models are only a fallback and only ever see pointer-level memory.</dd>
       </div>
       <div class="faq-pair">
         <dt>Am I locked in?</dt>
