@@ -987,6 +987,16 @@ body {
   color: var(--stone);
 }
 
+.capability-strip { margin: -56px 0 104px; }
+.capability-intro { margin: 0 0 14px; color: var(--stone); font-family: var(--latin-ui); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.capability-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.capability-item { min-width: 0; padding: 20px 22px 22px 0; }
+.capability-item + .capability-item { padding-left: 22px; border-left: 1px solid var(--line); }
+.capability-status { display: inline-flex; margin-bottom: 18px; padding: 5px 8px; border-radius: 999px; background: var(--brand-tint); color: var(--brand); font-family: var(--latin-ui); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.capability-status.experimental { background: var(--surface); color: var(--stone); border: 1px solid var(--line); }
+.capability-item h3 { margin: 0 0 7px; font-size: 18px; font-weight: 500; }
+.capability-item p { margin: 0; color: var(--olive); font-size: 12px; line-height: 1.5; }
+
 section { margin-bottom: 104px; }
 .section-head {
   display: grid;
@@ -1083,6 +1093,11 @@ section { margin-bottom: 104px; }
 .principles .n { font-family: var(--latin-ui); font-size: 12px; }
 .principles .body b { font-size: 19px; margin-bottom: 8px; }
 .principles .body span { font-size: 14px; }
+.ownership-panel { margin-top: 18px; padding: 28px; display: grid; grid-template-columns: 220px 1fr; gap: 36px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.ownership-panel h3 { margin: 0; color: var(--brand); font-size: 24px; font-weight: 500; }
+.ownership-list { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 28px; list-style: none; }
+.ownership-list li { padding-left: 16px; position: relative; color: var(--dark-warm); font-size: 13px; line-height: 1.5; }
+.ownership-list li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
 
 .beta-panel {
   position: relative;
@@ -1110,6 +1125,9 @@ section { margin-bottom: 104px; }
 .beta-details li::before { content: "·"; margin-right: 7px; color: #8fb6aa; }
 .beta-panel .btn-primary { background: var(--ivory); border-color: var(--ivory); color: var(--near-black); position: relative; z-index: 2; }
 .beta-panel .btn-primary:hover { background: var(--warm-sand); border-color: var(--warm-sand); color: var(--near-black); }
+.beta-steps { margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; counter-reset: beta-step; }
+.beta-steps li { padding: 18px 18px 0 0; border-top: 1px solid #4a4945; color: #d0cec5; font-family: var(--latin-ui); font-size: 11px; line-height: 1.45; counter-increment: beta-step; }
+.beta-steps li::before { content: "0" counter(beta-step); display: block; margin-bottom: 7px; color: #8fb6aa; font-size: 10px; letter-spacing: .08em; }
 
 .faq { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 54px; }
 .faq-pair { padding: 24px 0; margin: 0; border-top: 1px solid var(--line); }
@@ -1128,6 +1146,9 @@ footer.foot { margin-top: 96px; }
   .section-title { font-size: 38px; }
   section { margin-bottom: 78px; }
   .movement-grid { grid-template-columns: 1fr; }
+  .capability-grid { grid-template-columns: repeat(2, 1fr); }
+  .capability-item:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .capability-item:nth-child(4) { border-top: 1px solid var(--line); }
   .scenario { grid-template-columns: 1fr; gap: 10px; }
   .movement-step { min-height: 0; padding: 24px; }
   .movement-step + .movement-step { border-left: 1px solid var(--line); padding-left: 24px; }
@@ -1138,6 +1159,7 @@ footer.foot { margin-top: 96px; }
   .model-arrow { transform: rotate(90deg); justify-self: center; }
   .model-grid { grid-template-columns: repeat(2, 1fr); }
   .features li { grid-template-columns: 1fr; }
+  .ownership-panel { grid-template-columns: 1fr; gap: 22px; }
   .beta-panel { grid-template-columns: 1fr; align-items: start; }
 }
 
@@ -1146,6 +1168,10 @@ footer.foot { margin-top: 96px; }
   .nav-links a:not(.nav-cta):not(.nav-lang) { display: none; }
   .page { padding: 30px 18px 72px; }
   .hero { padding-top: 36px; margin-bottom: 68px; }
+  .capability-strip { margin-top: -34px; margin-bottom: 68px; }
+  .capability-grid { grid-template-columns: 1fr; }
+  .capability-item, .capability-item + .capability-item, .capability-item:nth-child(3) { padding: 18px 0; border-left: 0; border-top: 1px solid var(--line); }
+  .capability-item:first-child { border-top: 0; }
   .hero h1 { font-size: clamp(64px, 23vw, 88px); }
   .hero .tagline { font-size: 21px; }
   .hero-cta { flex-direction: column; align-items: flex-start; }
@@ -1157,6 +1183,8 @@ footer.foot { margin-top: 96px; }
   .gallery-tabs button { text-align: left; }
   .faq { grid-template-columns: 1fr; }
   .beta-panel { padding: 48px 26px; }
+  .beta-steps { grid-template-columns: repeat(2, 1fr); }
+  .ownership-list { grid-template-columns: 1fr; }
   .model-grid { grid-template-columns: 1fr; }
   .beta-panel h2 { font-size: 46px; }
 }
@@ -1202,6 +1230,16 @@ footer.foot { margin-top: 96px; }
       <figcaption><span>From interrupted context to the next decision</span><span>Observe · Review · Continue</span></figcaption>
     </figure>
   </header>
+
+  <aside class="capability-strip" aria-labelledby="capability-title">
+    <p class="capability-intro" id="capability-title">What you can test today</p>
+    <div class="capability-grid">
+      <article class="capability-item"><span class="capability-status">Available now</span><h3>Your existing workspace</h3><p>Open Markdown, code, data, and Git repositories in place without converting them to an Asterelle-only format.</p></article>
+      <article class="capability-item"><span class="capability-status">Available now</span><h3>Connected research tools</h3><p>Move among scientific writing, terminals, Git, project boards, and the research graph inside one project boundary.</p></article>
+      <article class="capability-item"><span class="capability-status">Private beta</span><h3>Persistent Mates</h3><p>Delegate bounded work, preserve execution history, and review the result before it becomes research state.</p></article>
+      <article class="capability-item"><span class="capability-status experimental">Experimental</span><h3>Night preparation</h3><p>Queue optional unattended work and return to evidence-backed candidates rather than silent edits.</p></article>
+    </div>
+  </aside>
 
   <!-- ============ 00 · Gallery ============ -->
   <section id="workbench">
@@ -1312,6 +1350,15 @@ footer.foot { margin-top: 96px; }
         <p class="what">Signals, overnight results, and connection candidates from every project arrive with evidence. No result enters through a silent automatic edit.</p>
       </li>
     </ol>
+    <div class="ownership-panel">
+      <h3>Your research stays yours.</h3>
+      <ul class="ownership-list">
+        <li>Canonical notes remain plain Markdown inside your workspace.</li>
+        <li>Existing Git repositories stay usable outside Asterelle.</li>
+        <li>Search and graph indexes are derived and rebuildable.</li>
+        <li>Provider and locality settings control model calls.</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ============ 03 · Multi-model ============ -->
@@ -1370,6 +1417,7 @@ footer.foot { margin-top: 96px; }
         <h2>Try it in your own research flow.</h2>
         <p>Asterelle is being tested with a small group of individual researchers in real research workspaces. Tell us about your environment and we will send a suitable desktop build with a guided starting point.</p>
         <ul class="beta-details"><li>macOS · Windows · Linux</li><li>Uses your existing Claude Code or Codex access</li><li>Does not modify system Python</li></ul>
+        <ol class="beta-steps"><li>Tell us your field and setup</li><li>We check workspace fit</li><li>Receive a suitable build</li><li>Start with one real project</li></ol>
       </div>
       <a class="btn-primary" href="mailto:kimjeasung0523@gmail.com?subject=Asterelle%20early%20access&body=Research%20field%3A%0AOperating%20system%3A%0ACurrent%20tools%3A%0AWhat%20I%20want%20to%20try%3A">Get early access</a>
     </div>

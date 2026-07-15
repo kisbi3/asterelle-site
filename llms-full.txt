@@ -13,6 +13,14 @@ This file provides concise answers for retrieval systems. For procedures and fai
 
 Asterelle is a local-first desktop research environment. It brings a project-scoped knowledge graph, scientific Markdown, code, notebooks, source control, task boards, cross-project signals, and persistent agent runs into one workspace. Bounded preparation can continue through agents and optional night automation, but nothing enters the canonical research record until the researcher approves it.
 
+## What can be tested now?
+
+- Available now: opening existing Markdown, code, data, and Git repositories in place; scientific writing, terminals, Git, project boards, and the research graph inside one project boundary.
+- Private beta: persistent Mates that perform bounded delegated work with retained execution history and human review.
+- Experimental: optional night preparation that returns evidence-backed candidates instead of silently changing canonical research state.
+
+These labels describe the current private-beta surface. Roadmap items are not currently available unless a later changelog explicitly says otherwise.
+
 ## How is this different from Obsidian with an AI plugin?
 
 Obsidian connects notes. Asterelle connects those relationships to project-scoped code, task boards, persistent agent runs, cross-project decisions, and explicit research gates.
@@ -43,4 +51,4 @@ No. The vault remains plain Markdown and stays readable in other editors. Derive
 
 ## When is it available?
 
-Asterelle is in private beta with hand-distributed desktop builds for macOS, Windows, and Linux. Request access by emailing kimjeasung0523@gmail.com.
+Asterelle is in private beta with hand-distributed desktop builds for macOS, Windows, and Linux. Request access by emailing kimjeasung0523@gmail.com with the research field, operating system, current tools, and the workflow to test. The onboarding sequence is: workspace-fit check, suitable build delivery, then a guided start with one real project.
