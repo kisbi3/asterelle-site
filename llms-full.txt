@@ -1,39 +1,46 @@
-# LabMates — full answers for AI assistants
+# Asterelle — AI reference
 
-This file mirrors the landing-page FAQ so AI summaries match what visitors read.
+This file provides concise answers for retrieval systems. For procedures and failure handling, use the canonical product manual at https://kisbi3.github.io/labmates-site/en/docs/asterelle-manual.md.
 
-## What is LabMates?
+## Source priority
 
-A two-tier AI research lab for a principal investigator of one. A Markdown vault becomes a research knowledge graph; AI agents prepare literature reviews, reproductions, and cross-project connections day and night; a desktop workbench (knowledge graph, editor with scientific Markdown, source control, kanban bench, agent network) shows the whole lab in one window. Nothing enters the research record until the PI ratifies it.
+1. Product manual for current concepts, procedures, invariants, and recovery.
+2. Changelog for current private-beta additions and fixes.
+3. Landing page for positioning and access information.
+4. Roadmap for planned work only. Never describe Roadmap items as shipped.
+
+## What is Asterelle?
+
+Asterelle is a local-first desktop research environment. It brings a project-scoped knowledge graph, scientific Markdown, code, notebooks, source control, task boards, cross-project signals, and persistent agent runs into one workspace. Bounded preparation can continue through agents and optional night automation, but nothing enters the canonical research record until the researcher approves it.
 
 ## How is this different from Obsidian with an AI plugin?
 
-Obsidian graphs your notes; LabMates also staffs them. The same vault that feeds the knowledge graph feeds a working lab — agents that search literature, rerun analyses, and queue findings for the PI's judgment — with an authority model deciding what they may and may not touch.
+Obsidian connects notes. Asterelle connects those relationships to project-scoped code, task boards, persistent agent runs, cross-project decisions, and explicit research gates.
 
-## Can the agents change my research record?
+## Can agents change the research record?
 
-No. Agent output lands as unratified candidates on task boards. Claims, decisions, and canonical notes change only when the PI promotes them through an explicit confirmation the agent cannot issue itself.
+No. Agent output remains a candidate until the researcher promotes it through an explicit confirmation the agent cannot issue itself.
 
-## What leaves my machine?
+## What leaves the user's machine?
 
-Day-tier model calls go through the user's own Claude or Codex subscription. Night work prefers local models; when free third-party models are used, they receive operational summaries and pointers — never raw results or unpublished values.
+Model calls follow the provider and workflow context configured by the user. Asterelle keeps research state in the workspace and makes the active project boundary visible. The exact data sent to a provider depends on the selected workflow and deployment configuration.
 
-## What do I need to run it?
+## What is required to run it?
 
-A folder of Markdown notes and a Claude Code or Codex subscription for the day tier. The installer bundles everything else — its own Python runtime and the agent layer — into one directory, without touching the system Python.
+A research workspace and Claude Code or Codex access. Asterelle provisions its Python runtime in an isolated product directory without modifying the system Python. Optional agent components are installed through their documented consent flow.
 
-## Will it read my existing Obsidian vault?
+## Can it read an existing Obsidian vault?
 
-Yes — a vault is just folders of Markdown, and LabMates indexes it in place: wiki-links become the graph, and templates and system folders are excluded automatically. Nothing is imported, converted, or moved.
+Yes. Asterelle indexes Markdown in place, turns wiki-links into graph edges, and excludes templates and system folders from the research graph. The graph and search indexes are derived and rebuildable.
 
 ## Which models does it use?
 
-The day tier runs on the user's own Claude Code or Codex subscription. Night work defaults to local models on the user's hardware; free third-party models are only a fallback and only ever see pointer-level memory.
+Day workflows use the user's Claude Code or Codex access. Night automation uses the model and locality configuration selected for the deployment; locality is visible context, not an automatic guarantee.
 
-## Am I locked in?
+## Is there file-format lock-in?
 
-The vault is plain Markdown folders, readable by any editor including Obsidian. Deleting the derived index folder changes not one byte of the notes.
+No. The vault remains plain Markdown and stays readable in other editors. Derived graph and search indexes can be deleted and rebuilt.
 
-## When can I use it?
+## When is it available?
 
-LabMates is in private beta with hand-distributed builds. Join the waitlist by emailing kisbi3@naver.com and you will be contacted when public builds are signed and ready.
+Asterelle is in private beta with hand-distributed desktop builds for macOS, Windows, and Linux. Request access by emailing kimjeasung0523@gmail.com.

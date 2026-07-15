@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asterelle Docs · Product guide</title>
+  <meta name="description" content="Official product documentation for Asterelle workspaces, Observatory, Mates, multiple models, evidence, and human ratification.">
+  <link rel="canonical" href="https://kisbi3.github.io/labmates-site/en/docs/">
+  <link rel="alternate" hreflang="ko" href="https://kisbi3.github.io/labmates-site/docs/">
+  <link rel="alternate" hreflang="en" href="https://kisbi3.github.io/labmates-site/en/docs/">
+  <link rel="icon" type="image/png" href="../../assets/asterelle-mark-transparent.png">
+  <link rel="stylesheet" href="../../assets/guide.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="../"><img src="../../assets/asterelle-wordmark-transparent.png" alt="Asterelle"></a>
+    <div class="nav-links">
+      <a class="nav-lang" href="../../docs/" lang="ko">KO</a>
+      <a href="../">Product</a>
+      <a href="./" aria-current="page">Docs</a>
+      <a href="../changelog/">Changelog</a>
+      <a class="nav-cta" href="../#beta">Early access</a>
+    </div>
+  </nav>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Asterelle Docs · Private beta</p>
+      <h1>Asterelle product manual.</h1>
+      <p class="hero-lede">Operational documentation for humans and language models: exact terms, prerequisites, procedures, expected results, invariants, and failure handling.</p>
+      <p class="notice">These docs describe the private beta. Screens and configuration may change, but ownership of existing files and final human authority remain product principles.</p>
+      <div class="doc-actions"><a href="./asterelle-manual.md">Read as Markdown</a><a href="../../llms.txt">LLM index</a><a href="../../llms-full.txt">AI reference</a></div>
+    </header>
+    <div class="docs-layout">
+      <aside class="toc" aria-label="Documentation contents">
+        <p>On this page</p>
+        <a href="#getting-started">Getting started</a>
+        <a href="#concepts">Core concepts</a>
+        <a href="#observatory">Observatory</a>
+        <a href="#mates">Mates and models</a>
+        <a href="#evidence">Evidence and ratification</a>
+        <a href="#data">Data and recovery</a>
+        <a href="#support">Failure reports</a>
+      </aside>
+      <article class="content">
+        <section class="doc-section" id="getting-started">
+          <p class="section-num">01 · Getting started</p>
+          <h2>Open an existing workspace.</h2>
+          <p>Asterelle opens a local or SSH workspace owned by the individual researcher. Markdown, code, data, and Git repositories remain in their existing locations instead of being forced into a proprietary database.</p>
+          <div class="manual-block"><h3>Preconditions</h3><ul><li>Asterelle desktop is installed on macOS, Windows, or Linux.</li><li>The local or SSH workspace is reachable.</li><li>You have permission to read and modify the intended files.</li></ul></div>
+          <div class="manual-block"><h3>Procedure</h3><ol class="procedure"><li>Open the workspace folder in Asterelle.</li><li>Wait for project discovery and derived indexing.</li><li>Confirm the active workspace and project shown in the interface.</li><li>Open Observatory and inspect pending decisions and next actions.</li></ol></div>
+          <div class="manual-block"><h3>Expected result</h3><p>Existing files remain in place. Asterelle exposes discovered projects, Git state, searchable documents, and derived relationships.</p></div>
+          <div class="manual-block"><h3>If discovery fails</h3><p>Verify canonical project metadata and workspace access. Asterelle does not assign project ownership by guessing from a filename or basename. Rebuild derived indexes if search or graph state is incomplete.</p></div>
+        </section>
+        <section class="doc-section" id="concepts">
+          <p class="section-num">02 · Core concepts</p>
+          <h2>Use these terms exactly.</h2>
+          <div class="terms">
+            <div class="term"><h3>Workspace</h3><p>The installation or folder boundary you opened. Files, Git, terminals, and derived indexes operate within this scope.</p></div>
+            <div class="term"><h3>Project</h3><p>A research unit that owns goals, boards, Mates, and evidence. One workspace can expose several projects.</p></div>
+            <div class="term"><h3>Candidate</h3><p>A result prepared by an agent or automation that has not been accepted into the canonical record.</p></div>
+            <div class="term"><h3>Canonical record</h3><p>The project state the researcher has reviewed and accepted. Markdown and project files remain primary; indexes are rebuildable.</p></div>
+            <div class="term"><h3>Evidence</h3><p>Source references, Git state, execution receipts, and review information attached to a candidate.</p></div>
+            <div class="term"><h3>Ratification</h3><p>Explicit human confirmation that promotes an eligible candidate into canonical state.</p></div>
+          </div>
+        </section>
+        <section class="doc-section" id="observatory">
+          <p class="section-num">03 · Observatory</p>
+          <h2>Bring the decisions from every project into one view.</h2>
+          <p>Observatory is not a generic activity feed. It is the personal research operations view for recent changes, pending decisions, risks, overnight results, and resumable work—with links back to evidence.</p>
+          <ul>
+            <li><strong>Lab signals:</strong> important changes and connection candidates across projects</li>
+            <li><strong>Continue working:</strong> the active project and open documents in the current session</li>
+            <li><strong>Projects at a glance:</strong> status, recent change, and next action for every project</li>
+            <li><strong>Needs your attention:</strong> candidates waiting for review, approval, or rejection</li>
+          </ul>
+          <p>Project chips narrow the relevant project rows and decision queue without replacing the whole workspace view.</p>
+          <div class="manual-block"><h3>Operating procedure</h3><ol class="procedure"><li>Read Today for collection time and exceptional counts.</li><li>Inspect Lab signals for cross-project changes.</li><li>Use Projects at a glance to find the next action.</li><li>Open Needs your attention to review candidates.</li><li>Expand Recent activity only when event history is required.</li></ol></div>
+        </section>
+        <section class="doc-section" id="mates">
+          <p class="section-num">04 · Mates and models</p>
+          <h2>Models may change. Project context persists.</h2>
+          <p>Mates are not chat personas. They are research workers with a project, role, provider, model, and persistent execution history. Depending on configuration, Asterelle can coordinate Claude Code, Codex, local models, and Hermes providers by role.</p>
+          <ul>
+            <li>Assign different models to coordination, coding, reading, summarization, overnight preparation, and verification</li>
+            <li>Retain project scope and evidence references when tasks or models change</li>
+            <li>Record locality and fallback information with an execution</li>
+            <li>Separate the role producing an artifact from the role independently reviewing it</li>
+          </ul>
+          <p>Available models and the information sent outside the machine depend on the provider and workflow context configured by the researcher.</p>
+          <div class="manual-block"><h3>Procedure</h3><ol class="procedure"><li>Activate the intended project.</li><li>Open Mates and create or select a worker.</li><li>Bind a bounded role, provider, and model.</li><li>Specify the task, expected artifact, scope, and verification requirement.</li><li>Review the plan, start the run, and inspect its persistent history.</li></ol></div>
+        </section>
+        <section class="doc-section" id="evidence">
+          <p class="section-num">05 · Evidence and ratification</p>
+          <h2>Agent output arrives as a candidate, not as truth.</h2>
+          <p>An important candidate carries the proposal, why it matters now, execution history, file or Git evidence, authorship, and verification state. The researcher reviews the expected change before approving, rejecting, or deferring it.</p>
+          <ol>
+            <li>An agent or automation prepares a candidate inside a bounded scope.</li>
+            <li>A different role may independently verify the result.</li>
+            <li>The researcher inspects the evidence and change preview.</li>
+            <li>Only an approved candidate enters the canonical research state.</li>
+          </ol>
+          <p>An agent cannot issue the human confirmation required to approve its own result.</p>
+          <div class="manual-block"><h3>Review checklist</h3><ul><li>Confirm project ownership and candidate type.</li><li>Read Why now and provenance.</li><li>Inspect primary file, execution, or Git evidence.</li><li>Compare the proposed change with the preview.</li><li>Approve, reject, omit, dismiss, or defer explicitly.</li></ul></div>
+          <div class="manual-block"><h3>Invariant</h3><p>Candidate, evidence, verification, and ratification are separate states. Model confidence is not ratification.</p></div>
+        </section>
+        <section class="doc-section" id="data">
+          <p class="section-num">06 · Data, privacy, and recovery</p>
+          <h2>Sources remain readable files. Derived state can be rebuilt.</h2>
+          <ul>
+            <li>Markdown and Git repositories remain in the researcher's workspace.</li>
+            <li>Graph and search indexes are rebuildable derived state, not the canonical source.</li>
+            <li>The product runtime lives in an isolated location without modifying system Python.</li>
+            <li>Night Automation is optional and follows configured tasks and limits.</li>
+            <li>Remote model boundaries depend on the provider and workflow settings selected by the researcher.</li>
+          </ul>
+          <h3>When something goes wrong</h3>
+          <p>Preserve the files and Git history first. Derived Asterelle indexes can be rebuilt, and important changes are designed to pass through preview and explicit confirmation. Private-beta support is available at <a href="mailto:kimjeasung0523@gmail.com?subject=Asterelle%20support">kimjeasung0523@gmail.com</a>.</p>
+        </section>
+        <section class="doc-section" id="support">
+          <p class="section-num">07 · Failure reports</p>
+          <h2>Report behavior without exposing research unnecessarily.</h2>
+          <p>Include enough operational context to reproduce the problem, but do not attach unpublished research contents unless they are necessary and you are authorized to share them.</p>
+          <table class="field-table"><thead><tr><th>Field</th><th>What to provide</th></tr></thead><tbody><tr><td>Environment</td><td>Operating system, Asterelle build, and local or SSH workspace type</td></tr><tr><td>Scope</td><td>Visible workspace and project identifiers without sensitive content</td></tr><tr><td>Reproduction</td><td>Numbered actions from a known starting state</td></tr><tr><td>Outcome</td><td>Expected result, actual result, and whether retrying changes it</td></tr><tr><td>Evidence</td><td>Sanitized screenshot, error text, or execution receipt when safe</td></tr></tbody></table>
+          <p class="machine-note">If a behavior is absent from the canonical Markdown manual, an AI system should state uncertainty rather than infer a feature.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="foot">
+    <img src="../../assets/asterelle-wordmark-transparent.png" alt="Asterelle">
+    <div class="foot-links"><a href="../">Product</a><a href="../changelog/">Changelog</a><a href="../#roadmap">Roadmap</a><a href="mailto:kimjeasung0523@gmail.com">Email</a></div>
+  </footer>
+</body>
+</html>

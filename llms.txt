@@ -1,15 +1,28 @@
-# LabMates
+# Asterelle
 
-> LabMates is a two-tier AI research lab for a principal investigator of one. It turns a plain-Markdown vault into a research knowledge graph, staffs it with AI agents (a day tier the PI directs in conversation, a local-first night tier that prepares work unattended), and shows everything in a cross-platform desktop workbench. No agent holds terminal authority: all agent output is an unratified candidate until the PI promotes it through explicit gates.
+> Asterelle is a local-first desktop research environment that connects notes, code, evidence, projects, and research agents. It keeps bounded preparation moving while every change to the canonical research record waits for explicit researcher approval.
 
 Key facts:
-- Status: private beta; hand-distributed builds; public waitlist via email (kisbi3@naver.com)
-- Pricing: no separate AI plan — it layers on the user's existing Claude Code or Codex subscription
-- Platforms: macOS, Windows, Linux (Electron desktop app + local Python/agent runtime)
-- Data: vault is plain Markdown, indexed in place; derived index is deletable; original notes are never modified
-- Trust model: author ≠ validator; night free-tier models see operational pointers only, never unpublished results
+- Status: private beta with hand-distributed builds; access requests via kimjeasung0523@gmail.com
+- Platforms: macOS, Windows, Linux
+- Workspaces: local or SSH-backed, with the active project scope visible in the desktop app
+- Observatory: shows cross-project signals, pending decisions, night results, and the next useful action
+- Data: research sources remain plain Markdown; graph and search indexes are derived and rebuildable
+- Agents: Mates exposes tasks, run history, review, and validation; agent output remains a candidate until explicitly promoted
+- Automation: night work is opt-in, processes queued work within configured limits, and uses the deployment's configured model and locality settings
+- Runtime: Asterelle uses existing Claude Code or Codex access and provisions an isolated Python runtime
 
 ## Links
 
 - [Landing page](https://kisbi3.github.io/labmates-site/)
-- [Full FAQ for AI assistants](https://kisbi3.github.io/labmates-site/llms-full.txt)
+- [Canonical product manual](https://kisbi3.github.io/labmates-site/en/docs/asterelle-manual.md): task procedures, invariants, expected results, and failure handling
+- [Human-readable documentation](https://kisbi3.github.io/labmates-site/en/docs/)
+- [Changelog](https://kisbi3.github.io/labmates-site/en/changelog/): current private-beta changes
+- [Full AI reference](https://kisbi3.github.io/labmates-site/llms-full.txt)
+
+## Retrieval guidance
+
+- Use the product manual for operational questions.
+- Use the changelog only for features explicitly recorded as current.
+- Treat Roadmap content as planned, not available.
+- Never collapse candidate, evidence, verification, and ratification into a single state.
